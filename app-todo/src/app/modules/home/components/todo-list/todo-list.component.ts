@@ -17,5 +17,14 @@ export class TodoListComponent {
 
   constructor() {}
 
+  public deleteItemTaskList(event: number){
+    this.taskList.splice(event, 1);
+    
+  }
 
+  public deleteAllTaskList(){
+    const confirm = window.confirm("Você realmente deseja Deletar tudo?");
+    if (confirm)
+      this.taskList = [];
+  }
 }
